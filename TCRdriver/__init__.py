@@ -18,8 +18,8 @@ if not (version[0] >= 2 and version[1] >= 2):
 version = TCRdriver.filter.get_pandaseq_version()
 if version is None:
     raise Exception('required software pandaseq not found')
-if not (version[0] >= 2 and version[1] >= 9):
-    raise Exception('pandaseq minimum supported version is 2.9')
+if not (version[0] >= 2 and version[1] >= 7):
+    raise Exception('pandaseq minimum supported version is 2.7')
 
 def fastq_basename(fastq):
     f = os.path.basename(fastq)
