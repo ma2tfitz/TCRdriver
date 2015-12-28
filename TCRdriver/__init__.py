@@ -23,7 +23,7 @@ if not (version[0] >= 2 and version[1] >= 7):
 
 def fastq_basename(fastq):
     f = os.path.basename(fastq)
-    for s in ('.gz', '.fq', '.fastq', '_R1', '_R2'):
+    for s in ('.gz', '.fq', '.fastq', '_001', '_R1', '_R2'):
         if f.endswith(s):
             f = f[:-len(s)]
     return f
